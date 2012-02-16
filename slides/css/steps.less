@@ -1,0 +1,149 @@
+@emphasize: #1D2;
+
+em {
+    color: @emphasize;
+    font-style: normal;
+}
+
+sup {
+    color: #888;
+}
+
+.footnote {
+    display: block;
+    color: #888;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+#title {
+    text-align: center;
+    font-weight: bold;
+}
+
+#what {
+    text-align: center;
+}
+
+#characteristics {
+    text-align: center;
+    height: 550px;
+    
+    img {
+        position: absolute;
+    }
+    
+    .gmail {
+        top: 200px;
+        left: 30px;
+    }
+    
+    .ft {
+        top: 180px;
+        right: 100px;
+    }
+    
+    .fq {
+        top: 210px;
+        left: 330px;
+    }
+    
+    .linkedin {
+        top: 390px;
+        left: 440px;
+    }
+    
+    .wunderkit {
+        top: 370px;
+        left: 200px;
+    }
+}
+
+.transition(@what, @duration, @offset) {
+    -webkit-transition: @what @duration @offset;
+    -moz-transition:    @what @duration @offset;
+    -ms-transition:     @what @duration @offset;
+    -o-transition:      @what @duration @offset;
+    transition:         @what @duration @offset;
+}
+
+#examples {
+    font-size: 40px;
+    height: 500px;
+    text-align: center;
+    
+    @duration: 1s;
+    @what: opacity;
+    @offset: 1s;
+
+    img {
+        position: absolute;
+        opacity: 0;
+    }
+    
+    .facebook {
+        top: 150px;
+        left: 30px;
+        
+        .transition(@what, @duration, @offset + 2s);
+    }
+    
+    .gmail {
+        top: 240px;
+        left: 260px;
+        
+        .transition(@what, @duration, @offset + 3s);
+    }
+    
+    .twitter {
+        top: 160px;
+        left: 410px;
+        .transition(@what, @duration, @offset + 4s);
+    }
+    
+    .ft {
+        top: 330px;
+        right: 250px;
+        .transition(@what, @duration, @offset + 5s);
+    }
+    
+    .amazon {
+        top: 230px;
+        right: 50px;
+        .transition(@what, @duration, @offset + 6s);
+    }
+    
+    .angryBirds {
+        top: 340px;
+        left: 50px;
+        .transition(@what, @duration, @offset + 7s);
+    }
+    
+    .angryBirdsBird {
+        left: 210px;
+        top: 350px;
+        .transition(@what, @duration, @offset + 7s);
+    }
+}
+
+.step-examples #examples img, .step-overview #examples img {
+    opacity: 1;
+}
+
+#possible {
+    font-size: 36px;
+    
+    ul {
+        font-size: 30px;
+        list-style: disc;
+        margin-left: 40px;
+        
+        .example {
+            color: #AAA;
+            
+            a:hover {
+                color: #EEE;
+            }
+        }
+    }
+}
