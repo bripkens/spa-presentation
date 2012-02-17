@@ -1,4 +1,4 @@
-@emphasize: #1D2;
+@emphasize: #0e73c8;
 
 em {
     color: @emphasize;
@@ -19,13 +19,30 @@ sup {
 #title {
     text-align: center;
     font-weight: bold;
+    font-size: 60px;
+    
+    .presenter {
+        color: @emphasize;
+        position: absolute;
+        font-size: 30px;
+        right: 100px;
+        top: 170px;
+    }
+    
+    .date {
+        position: absolute;
+        font-size: 30px;
+        right: 100px;
+        top: 210px;
+        font-weight: normal;
+    }
 }
 
 #what {
     text-align: center;
 }
 
-#characteristics {
+#examples {
     text-align: center;
     height: 550px;
     
@@ -59,91 +76,42 @@ sup {
     }
 }
 
-.transition(@what, @duration, @offset) {
-    -webkit-transition: @what @duration @offset;
-    -moz-transition:    @what @duration @offset;
-    -ms-transition:     @what @duration @offset;
-    -o-transition:      @what @duration @offset;
-    transition:         @what @duration @offset;
-}
-
-#examples {
-    font-size: 40px;
-    height: 500px;
-    text-align: center;
+#mobile {
     
-    @duration: 1s;
-    @what: opacity;
-    @offset: 1s;
-
-    img {
-        position: absolute;
-        opacity: 0;
-    }
-    
-    .facebook {
-        top: 150px;
-        left: 30px;
+    a {
+        background: none;
         
-        .transition(@what, @duration, @offset + 2s);
-    }
-    
-    .gmail {
-        top: 240px;
-        left: 260px;
         
-        .transition(@what, @duration, @offset + 3s);
-    }
-    
-    .twitter {
-        top: 160px;
-        left: 410px;
-        .transition(@what, @duration, @offset + 4s);
-    }
-    
-    .ft {
-        top: 330px;
-        right: 250px;
-        .transition(@what, @duration, @offset + 5s);
-    }
-    
-    .amazon {
-        top: 230px;
-        right: 50px;
-        .transition(@what, @duration, @offset + 6s);
-    }
-    
-    .angryBirds {
-        top: 340px;
-        left: 50px;
-        .transition(@what, @duration, @offset + 7s);
-    }
-    
-    .angryBirdsBird {
-        left: 210px;
-        top: 350px;
-        .transition(@what, @duration, @offset + 7s);
+        img {
+            width: 640px;
+            height: 390px;
+            margin: 30px auto 0;
+            display: block;
+        }
     }
 }
 
-.step-examples #examples img, .step-overview #examples img {
-    opacity: 1;
-}
-
-#possible {
-    font-size: 36px;
+#characteristics {
     
     ul {
         font-size: 30px;
         list-style: disc;
-        margin-left: 40px;
-        
-        .example {
-            color: #AAA;
-            
-            a:hover {
-                color: #EEE;
-            }
-        }
+        margin: 20px 0 0 40px;
+    }
+}
+
+#contact {
+    font-size: 36px;
+    
+    .thanks {
+        text-transform: uppercase;
+        color: @emphasize;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-size: 46px;
+    }
+    
+    p {
+        margin-bottom: 10px;
     }
 }
