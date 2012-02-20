@@ -34,7 +34,16 @@
         <span class="footnote"><sup>*</sup>single page application</span>
     </div>
     
-    <div id="examples" class="step" data-x="-1200" data-y="-2300">
+    <div id="characteristics" class="step" data-x="-1000" data-y="-2300">
+        Characteristics
+        <ul>
+            <li>Few to no page reloads</li>
+            <li>A fair amount of logic is executed on client-side</li>
+            <li>Server-side complexity is reduced</li>
+        </ul>
+    </div>
+    
+    <div id="examples" class="step" data-x="0" data-y="-3000">
         A few examples
         
         <img src="img/gmail.png" class="gmail" />
@@ -44,7 +53,7 @@
         <img src="img/wunderkit.png" class="wunderkit" />
     </div>
     
-    <div id="mobile" class="step" data-x="0" data-y="-3000">
+    <div id="mobile" class="step" data-x="0" data-y="-2300">
         SPA to replace mobile (native) apps
         
         <a href="http://www.youtube.com/watch?feature=player_embedded&v=JTywh4QJWMM"
@@ -54,16 +63,60 @@
         </a>
     </div>
     
-    <div id="characteristics" class="step" data-x="200" data-y="-2300">
-        Characteristics
-        <ul>
-            <li>Few to no page reloads</li>
-            <li>A fair amount of logic is executed on client-side</li>
-            <li>Server-side complexity is reduced</li>
-        </ul>
+    <div id="arch1" class="step arch" data-x="0" data-y="-1600">
+        <div class="box browser">
+            <span class="title">Browser</span>
+            
+            <span class="action">renders</span>
+            <img src="img/html.png" />
+            
+            <div class="down-request"></div>
+        </div>
+        <div class="box server">
+            <span class="title">Server</span>
+            
+            <span class="action">generates</span>
+            <img src="img/html.png" />
+            
+            <div class="down-request"></div>
+            <!--<div class="up-result"></div>-->
+        </div>
+        <div class="box db">
+            <img src="img/database.png" />
+            <!--<div class="up-result"></div>-->
+        </div>
     </div>
     
-    <div id="contact" class="step" data-x="-3000" data-y="-2000" data-scale="2">
+    <div id="arch2" class="step arch" data-x="0" data-y="-1600">
+        <div class="box browser">
+            <span class="action">generates and renders</span>
+            <!--<div class="down-result"></div>-->
+        </div>
+        <div class="box server">
+            <div class="json">
+                <span class="js-punctuation" style="">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="js-string">"name"</span>:
+                    <span class="js-string">"John Doe"</span>,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="js-string">"message"</span>:
+                    <span class="js-string">"Hello students!"</span><br>
+                    }
+            </div>
+            
+            <div class="up-result"></div>
+        </div>
+    </div>
+    
+    <div id="conclusion" class="step" data-x="-1000" data-y="-1800">
+        What about tool support, libraries, frameworks?
+    </div>
+    
+    <div id="checkout" class="step" data-x="-2000" data-y="-1800">
+        TODO
+    </div>
+    
+    <div id="contact" class="step" data-x="-3000" data-y="-2000" data-scale="3">
         <p class="thanks">Thanks!</p>
         
         <p class="presenter">Ben Ripkens</p>
@@ -78,7 +131,7 @@
         
     </div>
     
-    <div id="overview" class="step" data-x="-1500" data-y="-1500" data-scale="5">
+    <div id="overview" class="step" data-x="-1800" data-y="-2100" data-scale="5">
     </div>
 
 </div>
