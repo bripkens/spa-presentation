@@ -1,7 +1,7 @@
 # Single page application presentation
 
-This presentation will be given Fontys University of Applied Sciences
-Venlo on March 21.
+This presentation was be given at Fontys University of Applied Sciences
+Venlo on March 21 2012.
 
 # Icons
 
